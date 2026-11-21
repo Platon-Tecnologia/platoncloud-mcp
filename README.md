@@ -20,6 +20,14 @@ O endpoint geral é `https://api.platoncloud.com/functions/v1/mcp`, via Streamab
 
 [OpenAI](https://developers.openai.com/plugins/deploy/submission) · [Cursor](https://cursor.com/marketplace/publish) · [Claude](https://claude.com/resources/articles/build-plugins-for-claude) · [skills.sh](https://vercel.com/kb/guide/agent-skills-creating-installing-and-sharing-reusable-agent-context) · [MCP Registry](https://modelcontextprotocol.io/registry/quickstart)
 
+## Instalação no Claude Code
+
+No Claude Code, instale o plugin pelo repositório da Platon.
+
+```text
+/plugin install platon-cloud --marketplace Platon-Tecnologia/platoncloud-mcp
+```
+
 ## Pendências para a versão pública
 
 - **Identidade e arquivos de publicação.** Verificar a identidade da Platon nos portais e confirmar a cobertura do aviso de privacidade para a integração MCP.

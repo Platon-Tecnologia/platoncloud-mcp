@@ -1,0 +1,14 @@
+{
+  "name": "platon-tecnologia",
+  "description": "Plugins da Platon Tecnologia para Claude Code.",
+  "owner": {
+    "name": "Platon Tecnologia"
+  },
+  "plugins": [
+    {
+      "name": "platon-cloud",
+      "source": "./",
+      "description": "Connect Claude Code to the Platon Cloud MCP server."
+    }
+  ]
+}

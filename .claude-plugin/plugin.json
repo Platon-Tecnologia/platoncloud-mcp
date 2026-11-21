@@ -8,5 +8,16 @@
     "url": "https://platon.com.br/platon-cloud/"
   },
   "repository": "https://github.com/Platon-Tecnologia/platoncloud-mcp",
-  "icon": "./assets/platon-mark.png"
+  "icon": "./assets/platon-mark.png",
+  "displayName": "Platon Cloud",
+  "homepage": "https://platon.com.br/platon-cloud/",
+  "supportUrl": "https://platon.com.br/fale-conosco/",
+  "documentationUrl": "https://api.platoncloud.com/functions/v1/mcp/llms.txt",
+  "termsOfServiceUrl": "https://platon.com.br/termos-de-servicos/",
+  "keywords": [
+    "cloud",
+    "inventory",
+    "mcp",
+    "platon"
+  ]
 }
