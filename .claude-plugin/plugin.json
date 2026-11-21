@@ -1,0 +1,11 @@
+{
+  "name": "platon-cloud",
+  "version": "0.1.0",
+  "description": "Manage cloud infrastructure and services through the Platon Cloud MCP connector.",
+  "privacyPolicyUrl": "https://platon.com.br/central/dl.php?type=d&id=63",
+  "author": {
+    "name": "Platon Tecnologia",
+    "url": "https://platon.com.br/platon-cloud/"
+  },
+  "repository": "https://github.com/Platon-Tecnologia/platoncloud-mcp"
+}

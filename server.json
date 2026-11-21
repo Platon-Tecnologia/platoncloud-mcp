@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.platoncloud/mcp",
+  "title": "Platon Cloud",
+  "description": "Manage cloud infrastructure and services through the Platon Cloud MCP connector.",
+  "version": "1.0.0",
+  "websiteUrl": "https://console.platoncloud.com/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.platoncloud.com/functions/v1/mcp"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/Platon-Tecnologia/platoncloud-mcp",
+    "source": "github"
+  }
+}

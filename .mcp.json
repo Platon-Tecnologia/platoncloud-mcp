@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "platon-cloud": {
+      "type": "http",
+      "url": "https://api.platoncloud.com/functions/v1/mcp"
+    }
+  }
+}

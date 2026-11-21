@@ -1,0 +1,100 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "platon-cloud",
+  "version": "0.1.0",
+  "description": "Manage cloud infrastructure and services through the Platon Cloud MCP connector.",
+  "homepage": "https://console.platoncloud.com/mcp",
+  "keywords": [
+    "cloud",
+    "infrastructure",
+    "mcp",
+    "platon",
+    "vps"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Platon Cloud",
+        "shortDescription": "Manage cloud infrastructure",
+        "longDescription": "Connect your Platon Cloud account to inspect projects and cloud resources, including VPS, DNS zones, domains, and object storage. Available operations depend on the Platon OAuth grant and tenant permissions. The integration can also access billing and support where authorized.",
+        "developerName": "Platon Tecnologia",
+        "category": "Developer Tools",
+        "websiteURL": "https://platon.com.br/platon-cloud/",
+        "supportURL": "https://platon.com.br/fale-conosco/",
+        "privacyPolicyURL": "https://platon.com.br/central/dl.php?type=d&id=63",
+        "termsOfServiceURL": "https://platon.com.br/termos-de-servicos/",
+        "defaultPrompt": [
+          "List my accessible Platon Cloud projects.",
+          "List my VPS instances and their current status.",
+          "Show the DNS zones I can access in Platon Cloud."
+        ]
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Identify the active authorization scope",
+              "prompt": "No Platon Cloud, qual é o escopo da minha conexão?",
+              "tools_triggered": "core_whoami",
+              "expected_behavior": "Identify whether the grant covers the organization or a project and show the scope available to the signed-in reviewer."
+            },
+            {
+              "description": "List accessible projects",
+              "prompt": "Liste os projetos da Platon Cloud que esta conexão consegue acessar.",
+              "tools_triggered": "project_list",
+              "expected_behavior": "List projects visible to the grant or state that the list is empty."
+            },
+            {
+              "description": "Inventory VPS instances",
+              "prompt": "Liste minhas VPS na Platon Cloud, com o estado das instâncias.",
+              "tools_triggered": "vps_list",
+              "expected_behavior": "Return the accessible instances and their reported status, or explain that the account has none."
+            },
+            {
+              "description": "List DNS zones",
+              "prompt": "Quais zonas DNS estão disponíveis na minha conta Platon Cloud?",
+              "tools_triggered": "dns_zone_list",
+              "expected_behavior": "Show the zones visible to the reviewer or report an empty inventory."
+            },
+            {
+              "description": "Inventory S3 buckets",
+              "prompt": "Liste os buckets do Object Storage da Platon Cloud.",
+              "tools_triggered": "storage_bucket_list",
+              "expected_behavior": "Show the visible buckets or report an empty inventory."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated document request",
+              "prompt": "Reescreva esta frase em tom formal: te envio o texto amanhã.",
+              "expected_behavior": "Return only the revised sentence."
+            },
+            {
+              "description": "Attempt to purchase a new subscription",
+              "prompt": "Contrate um novo plano pago de VPS da Platon Cloud usando o saldo da conta.",
+              "expected_behavior": "Explain that new subscriptions are handled in the Platon Console and leave the current balance and infrastructure unchanged."
+            },
+            {
+              "description": "Requested destructive action with unresolved target",
+              "prompt": "Apague aquela VPS de teste na Platon Cloud.",
+              "expected_behavior": "Identify the specific instance and wait for explicit confirmation before any change."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "translations": {
+          "pt-BR": {
+            "subtitle": "Gerencie sua infraestrutura",
+            "description": "Conecte sua conta Platon Cloud para consultar projetos, VPS, zonas DNS, domínios e buckets. As operações disponíveis dependem do escopo OAuth e das permissões concedidas na Platon."
+          }
+        }
+      }
+    }
+  },
+  "author": {
+    "name": "Platon Tecnologia",
+    "url": "https://platon.com.br/platon-cloud/"
+  },
+  "repository": "https://github.com/Platon-Tecnologia/platoncloud-mcp"
+}

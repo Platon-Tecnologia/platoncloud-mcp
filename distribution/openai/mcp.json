@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "platon-cloud": {
+      "type": "streamable-http",
+      "url": "https://api.platoncloud.com/functions/v1/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "dcr"
+            },
+            "authorizationUrl": "https://api.platoncloud.com/functions/v1/mcp-oauth/authorize",
+            "tokenUrl": "https://api.platoncloud.com/functions/v1/mcp-oauth/token",
+            "registrationUrl": "https://api.platoncloud.com/functions/v1/mcp-oauth/register",
+            "resource": "https://api.platoncloud.com/functions/v1/mcp",
+            "baseScopes": [
+              "mcp:tools"
+            ],
+            "authorizationServerBase": "https://console.platoncloud.com"
+          }
+        }
+      }
+    }
+  }
+}
