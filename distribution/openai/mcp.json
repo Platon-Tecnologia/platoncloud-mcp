@@ -3,7 +3,7 @@
   "mcpServers": {
     "platon-cloud": {
       "type": "streamable-http",
-      "url": "https://api.platoncloud.com/functions/v1/mcp",
+      "url": "https://api.platoncloud.com/functions/v1/mcp/public",
       "extensions": {
         "com.openai": {
           "auth": {
@@ -14,7 +14,7 @@
             "authorizationUrl": "https://api.platoncloud.com/functions/v1/mcp-oauth/authorize",
             "tokenUrl": "https://api.platoncloud.com/functions/v1/mcp-oauth/token",
             "registrationUrl": "https://api.platoncloud.com/functions/v1/mcp-oauth/register",
-            "resource": "https://api.platoncloud.com/functions/v1/mcp",
+            "resource": "https://api.platoncloud.com/functions/v1/mcp/public",
             "baseScopes": [
               "mcp:tools"
             ],

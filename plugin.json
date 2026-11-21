@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "platon-cloud",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Manage cloud infrastructure and services through the Platon Cloud MCP connector.",
   "homepage": "https://console.platoncloud.com/mcp",
   "keywords": [
@@ -15,8 +15,8 @@
     "com.openai": {
       "interface": {
         "displayName": "Platon Cloud",
-        "shortDescription": "Manage cloud infrastructure",
-        "longDescription": "Connect your Platon Cloud account to inspect projects and cloud resources, including VPS, DNS zones, domains, and object storage. Available operations depend on the Platon OAuth grant and tenant permissions. The integration can also access billing and support where authorized.",
+        "shortDescription": "Inventory cloud resources",
+        "longDescription": "Connect your Platon Cloud account to view projects, VPS instances, DNS zones, and object storage buckets. This directory connector provides read-only inventory within the OAuth grant approved in Platon Cloud.",
         "developerName": "Platon Tecnologia",
         "category": "Developer Tools",
         "websiteURL": "https://platon.com.br/platon-cloud/",
@@ -27,7 +27,10 @@
           "List my accessible Platon Cloud projects.",
           "List my VPS instances and their current status.",
           "Show the DNS zones I can access in Platon Cloud."
-        ]
+        ],
+        "logo": "./assets/platon-mark.png",
+        "composerIcon": "./assets/platon-mark.png",
+        "brandColor": "#C30C42"
       },
       "review": {
         "test_cases": {
@@ -85,8 +88,8 @@
       "publication": {
         "translations": {
           "pt-BR": {
-            "subtitle": "Gerencie sua infraestrutura",
-            "description": "Conecte sua conta Platon Cloud para consultar projetos, VPS, zonas DNS, domínios e buckets. As operações disponíveis dependem do escopo OAuth e das permissões concedidas na Platon."
+            "subtitle": "Consulte sua infraestrutura",
+            "description": "Consulte projetos, VPS, zonas DNS e buckets da Platon Cloud. O conector do diretório oferece leitura no escopo autorizado no consentimento OAuth."
           }
         }
       }
@@ -96,5 +99,6 @@
     "name": "Platon Tecnologia",
     "url": "https://platon.com.br/platon-cloud/"
   },
-  "repository": "https://github.com/Platon-Tecnologia/platoncloud-mcp"
+  "repository": "https://github.com/Platon-Tecnologia/platoncloud-mcp",
+  "license": "Apache-2.0"
 }
